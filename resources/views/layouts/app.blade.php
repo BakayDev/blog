@@ -55,15 +55,11 @@
             <div id="navbar" class="navbar-collapse collapse">
                 <div class="container">
                     <ul class="nav navbar-nav menu-right">
-
-
                         @guest
                             <li class="dropdown adjust-pos">
                                 <a href="{{ route('login') }}">{{ __('Login') }}</a>
                             </li>
                             @if (Route::has('register'))
-
-
                                 <li class="dropdown adjust-pos">
                                     <a href="{{ route('register') }}">{{ __('Register') }}</a>
                                 </li>
@@ -71,6 +67,7 @@
                         @else
                             <li class="dropdown"><a class="dropdown-toggle">  {{ Auth::user()->name }} <i class="ti-angle-down"></i></a>
                                 <ul class="dropdown-menu">
+                                    <li> <a class="dropdown-item" href="{{ route('cabinet') }}">{{ __('Cabinet') }}</a></li>
                                     <li> <a class="dropdown-item" href="{{ route('logout') }}"
                                                onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
@@ -79,8 +76,6 @@
                                             @csrf
                                         </form>
                                     </li>
-
-
                                 </ul>
                             </li>
                         @endguest
