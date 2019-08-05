@@ -11,13 +11,13 @@
 
     <!-- Scripts -->
    {{-- <script src="{{ asset('js/app.js') }}" defer></script>--}}
-  {{--  <link href="{{ asset('build/css/app.css') }}" rel="stylesheet">--}}
+    <link href="{{ mix('css/app.css', 'build') }}" rel="stylesheet">
+
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <!-- Styles -->
-{{--    <link href="{{ asset('css/app.css') }}" rel="stylesheet">--}}
 
     <link href="assets/img/assets/favicon.png" rel="icon" type="image/png">
     <link href="assets/css/plugins.css" rel="stylesheet" type="text/css">
@@ -157,7 +157,7 @@
     <!-- Scripts -->
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/plugins.js"></script>
- {{--   <script src="{{ asset('build/js/app.js') }}"></script>--}}
+{{--    <script src="{{ mix('js/app.js', 'build') }}"></script>--}}
     <script src="assets/js/scripts.js"></script>
 
 </body>
