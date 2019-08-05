@@ -1,65 +1,45 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Reset Password') }}</div>
+<section class="checkout">
+        <div class="container">
+            <ul class="breadcrumb">
+                <li class="breadcrumb-item"><a href="{{ route('home')  }}">Home</a></li>
+                <li class="breadcrumb-item"><a href="{{ route('login')  }}">Login</a></li>
+                <li class="breadcrumb-item"><a href="{{ route('password.request')  }}">Reset</a></li>
+                <li class="breadcrumb-item active">Change</li>
+            </ul>
+            <div class="row">
+                <form method="POST" action="{{ route('password.update') }}">
+                    @csrf
+                    <input type="hidden" name="token" value="{{ $token }}">
 
-                <div class="card-body">
-                    <form method="POST" action="{{ route('password.update') }}">
-                        @csrf
-
-                        <input type="hidden" name="token" value="{{ $token }}">
-
-                        <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ $email ?? old('email') }}" required autocomplete="email" autofocus>
-
-                                @error('email')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
+                    <div class="col-md-4 mr-auto text-center mt40 mb40">
+                        <div class="section-heading">
+                            <h2>{{ __('Reset Password') }}</h2>
+                            <hr class="separator">
                         </div>
 
-                        <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
+                        @error('email')
+                        <span class="invalid-feedback" role="alert"><a>{{ $message }}</a></span>
+                        @enderror
+                        <input  id="email" type="text" class="input-text @error('email') is-invalid @enderror" name="email"  value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="{{ __('E-Mail Address') }}" >
 
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+                        @error('password')
+                        <span class="invalid-feedback" role="alert"><a>{{ $message }}</a></span>
+                        @enderror
+                        <input id="password" type="password" class="input-text   @error('password')   is-invalid @enderror" name="password" placeholder="{{ __('Password') }}" required autocomplete="current-password">
 
-                                @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
+                        <input id="password-confirm" type="password" class="input-text" name="password_confirmation" placeholder="{{ __('Confirm Password') }}" required autocomplete="current-password">
 
-                        <div class="form-group row">
-                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
+                    </div>
 
-                            <div class="col-md-6">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
-                            </div>
-                        </div>
-
-                        <div class="form-group row mb-0">
-                            <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Reset Password') }}
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
+                    <div class="col-md-4 mr-auto">
+                        <button type="submit" class="btn btn-primary btn-md btn-appear btn-cart-checkout"><span>  {{ __('Reset Password') }}<i class="ion-ios-arrow-forward"></i></span></button>
+                    </div>
+                </form>
             </div>
         </div>
-    </div>
-</div>
+    </section>
+
 @endsection

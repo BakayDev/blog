@@ -3,6 +3,10 @@
 @section('content')
 <section class="checkout">
         <div class="container">
+            <ul class="breadcrumb">
+                <li class="breadcrumb-item"><a href="{{ route('home')  }}">Home</a></li>
+                <li class="breadcrumb-item active">Register</li>
+            </ul>
             <div class="row">
                 <form method="POST" action="{{ route('register') }}">
                     @csrf
@@ -56,6 +60,4 @@
             </div>
         </div>
     </section>
-
-
 @endsection

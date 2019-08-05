@@ -19,17 +19,17 @@
 
     <!-- Styles -->
 
-    <link href="assets/img/assets/favicon.png" rel="icon" type="image/png">
-    <link href="assets/css/plugins.css" rel="stylesheet" type="text/css">
-    <link href="assets/css/theme.css" rel="stylesheet" type="text/css">
-    <link href="assets/css/ionicons.min.css" rel="stylesheet" type="text/css">
-    <link href="assets/css/et-line-icons.css" rel="stylesheet" type="text/css">
-    <link href="assets/css/themify-icons.css" rel="stylesheet" type="text/css">
-    <link href="assets/fonts/lovelo/stylesheet.css" rel="stylesheet" type="text/css">
+    <link href="{{asset('assets/img/assets/favicon.png')}}" rel="icon" type="image/png">
+    <link href="{{asset('assets/css/plugins.css')}}" rel="stylesheet" type="text/css">
+    <link href="{{asset('assets/css/theme.css')}}" rel="stylesheet" type="text/css">
+    <link href="{{asset('assets/css/ionicons.min.css')}}" rel="stylesheet" type="text/css">
+    <link href="{{asset('assets/css/et-line-icons.css')}}" rel="stylesheet" type="text/css">
+    <link href="{{asset('assets/css/themify-icons.css')}}" rel="stylesheet" type="text/css">
+    <link href="{{asset('assets/fonts/lovelo/stylesheet.css')}}" rel="stylesheet" type="text/css">
     <link href="https://cdn.jsdelivr.net/npm/pretty-checkbox@3.0/dist/pretty-checkbox.min.css" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Raleway:100,200,300,400%7COpen+Sans:400,300' rel='stylesheet' type='text/css'>
-    <link href="assets/css/custom.css" rel="stylesheet" type="text/css">
-    <link href="assets/css/colors/blue.css" id="color-scheme" rel="stylesheet" type="text/css">
+    <link href="{{asset('assets/css/custom.css')}}" rel="stylesheet" type="text/css">
+    <link href="{{asset('assets/css/colors/blue.css')}}" id="color-scheme" rel="stylesheet" type="text/css">
 </head>
 <body>
     <div id="app">
@@ -46,7 +46,7 @@
                         <span class="icon-bar middle-bar"></span>
                         <span class="icon-bar bottom-bar"></span>
                     </button>
-                    <a class="navbar-brand"  href="{{ url('/') }}"><img src="img/assets/logo-light.png" class="logo-light" alt="#"><img src="img/assets/logo-dark.png" class="logo-dark" alt="#"></a>
+                    <a class="navbar-brand"  href="{{ url('/') }}"><img src="{{asset('img/assets/logo-light.png')}}" class="logo-light" alt="#"><img src="{{asset('img/assets/logo-dark.png')}}" class="logo-dark" alt="#"></a>
                 </div>
             </div>
 
@@ -155,10 +155,10 @@
     </div>
 
     <!-- Scripts -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/plugins.js"></script>
+    <script src="{{asset('assets/js/jquery.min.js')}}"></script>
+    <script src="{{asset('assets/js/plugins.js')}}"></script>
 {{--    <script src="{{ mix('js/app.js', 'build') }}"></script>--}}
-    <script src="assets/js/scripts.js"></script>
+    <script src="{{asset('assets/js/scripts.js')}}"></script>
 
 </body>
 </html>

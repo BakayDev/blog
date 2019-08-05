@@ -3,6 +3,10 @@
 @section('content')
     <section class="checkout">
         <div class="container">
+            <ul class="breadcrumb">
+                <li class="breadcrumb-item"><a href="{{ route('home')  }}">Home</a></li>
+                <li class="breadcrumb-item active">Login</li>
+            </ul>
             <div class="row">
                 <form method="POST" action="{{ route('login') }}">
                  @csrf
@@ -38,9 +42,7 @@
                     <button type="submit" class="btn btn-primary btn-md btn-appear btn-cart-checkout"><span> {{ __('Login') }} <i class="ion-ios-arrow-forward"></i></span></button>
 
                     @if (Route::has('password.request'))
-
-                            <p class="small-print">  <a  href="{{ route('password.request') }}" class="highlight">  {{ __('Forgot Your Password?') }}</a></p>
-
+                            <p class="small-print">  <a href="{{ route('password.request') }}" class="highlight">  {{ __('Forgot Your Password?') }}</a></p>
                     @endif
 
                     @if (Route::has('register'))
