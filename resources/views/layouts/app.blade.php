@@ -11,7 +11,7 @@
 
     <!-- Scripts -->
    {{-- <script src="{{ asset('js/app.js') }}" defer></script>--}}
-
+  {{--  <link href="{{ asset('build/css/app.css') }}" rel="stylesheet">--}}
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
@@ -156,7 +156,9 @@
 
     <!-- Scripts -->
     <script src="assets/js/jquery.min.js"></script>
-  {{--  <script src="assets/js/plugins.js"></script>--}}
+    <script src="assets/js/plugins.js"></script>
+ {{--   <script src="{{ asset('build/js/app.js') }}"></script>--}}
     <script src="assets/js/scripts.js"></script>
+
 </body>
 </html>

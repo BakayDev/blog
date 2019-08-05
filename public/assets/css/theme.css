@@ -510,15 +510,11 @@ a.highlight:hover {
 .owl-carousel .owl-item {
 	cursor: move; /* fallback if grab cursor is unsupported */
 	cursor: grab;
-	cursor: -moz-grab;
-	cursor: -webkit-grab;
 	margin-right: -0.1px!important
 }
  /* Applies a "closed-hand" cursor during drag operation. */
 .owl-carousel  .owl-item:active {
 	cursor: grabbing;
-	cursor: -moz-grabbing;
-	cursor: -webkit-grabbing;
 }
 
 /* Play Button */
@@ -2323,7 +2319,6 @@ fieldset[disabled] .btn-primary.active, fieldset[disabled] .btn-primary.focus, f
 .alert-danger,
 .alert-success,
 .alert-warning {
-  border-color: none;
 }
 
 /*---------- ICON LISTS ----------*/
@@ -3244,7 +3239,6 @@ ul {
 }
 .price-box h2 {
 	font-family: "lovelo", sans-serif;
-	font-size:
 }
 .price-box h2 sup {
 	font-size: 32px;
@@ -4137,7 +4131,6 @@ ul {
 	border-bottom: 2px solid #ddd;
 }
 textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="date"]:focus, input[type="month"]:focus, input[type="time"]:focus, input[type="week"]:focus, input[type="number"]:focus, input[type="email"]:focus, input[type="url"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="color"]:focus, .uneditable-input:focus {
-	border-color: none;
 	box-shadow: none;
 	outline: 0 none;
 }
@@ -4145,14 +4138,13 @@ textarea {
 	height: 160px;
 }
 ::-webkit-input-placeholder {
-	color: #aaa
-	 -webkit-transition: -webkit-border-color: 0.35s;
+	color: #aaa;
+	 -webkit-transition: -webkit-border-color;
 	transition: border-color 0.35s;
 }
 .contact input:focus, textarea:focus, select:focus {
 	color: #191a1c;
 	border-color: #52555A;
-	-webkit-transition: -webkit-border-color: 0.35s;
 	transition: border-color 0.35s;
 }
 
@@ -5568,7 +5560,7 @@ section {
 	float: right;
 }
 #clock.event-countdown .digit {
-	font-size:
+
 }
 .event-price .price-box h2 sup {
 	margin-left: -26px;
