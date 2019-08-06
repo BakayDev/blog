@@ -1,13 +1,22 @@
 @extends('layouts.app')
 
+@section('breadcrumbs')
+    <section  style="padding-top: 80px;">
+    <div class="container">
+    <ul class="breadcrumb">
+        <li class="breadcrumb-item"><a href="{{ route('home')  }}">Home</a></li>
+        <li class="breadcrumb-item active">Register</li>
+    </ul>
+    </div>
+    </section>
+@endsection
+
 @section('content')
     <section class="checkout">
         <div class="container">
-            <ul class="breadcrumb">
-                <li class="breadcrumb-item"><a href="{{ route('home')  }}">Home</a></li>
-                <li class="breadcrumb-item active">Login</li>
-            </ul>
+
             <div class="row">
+
                 <form method="POST" action="{{ route('login') }}">
                  @csrf
                 <div class="col-md-4 mr-auto text-center mt40 mb40">

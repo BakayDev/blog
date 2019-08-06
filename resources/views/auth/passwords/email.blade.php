@@ -1,13 +1,18 @@
 @extends('layouts.app')
-
-@section('content')
-<section class="checkout">
+@section('breadcrumbs')
+    <section style="padding-top: 80px;">
         <div class="container">
             <ul class="breadcrumb">
                 <li class="breadcrumb-item"><a href="{{ route('home')  }}">Home</a></li>
                 <li class="breadcrumb-item"><a href="{{ route('login')  }}">Login</a></li>
                 <li class="breadcrumb-item active">Reset</li>
             </ul>
+        </div>
+    </section>
+@endsection
+@section('content')
+    <section class="checkout">
+        <div class="container">
             <div class="row">
                 <form method="POST" action="{{ route('password.email') }}">
                     @csrf
@@ -21,15 +26,17 @@
                         @error('email')
                         <span class="invalid-feedback" role="alert"><a>{{ $message }}</a></span>
                         @enderror
-                        <input  id="email" type="text" class="input-text @error('email') is-invalid @enderror" name="email"  value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="{{ __('E-Mail Address') }}" >
+                        <input id="email" type="text" class="input-text @error('email') is-invalid @enderror"
+                               name="email" value="{{ old('email') }}" required autocomplete="email" autofocus
+                               placeholder="{{ __('E-Mail Address') }}">
                     </div>
 
                     <div class="col-md-4 mr-auto">
-                        <button type="submit" class="btn btn-primary btn-md btn-appear btn-cart-checkout"><span>{{ __('Send Password Reset Link') }}<i class="ion-ios-arrow-forward"></i></span></button>
+                        <button type="submit" class="btn btn-primary btn-md btn-appear btn-cart-checkout"><span>{{ __('Send Password Reset Link') }}<i
+                                        class="ion-ios-arrow-forward"></i></span></button>
                     </div>
                 </form>
             </div>
         </div>
     </section>
-
 @endsection

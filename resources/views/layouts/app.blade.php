@@ -86,9 +86,11 @@
         </div>
     </nav>
     <!-- End Header -->
+    @yield('breadcrumbs')
 
-    <!-- Content -->
     @yield('content')
+    <!-- Content -->
+
     <!-- Content -->
 
     <!-- Footer One -->
