@@ -87,7 +87,7 @@
     </nav>
     <!-- End Header -->
     @yield('breadcrumbs')
-
+    @include('layouts.partials.flash')
     @yield('content')
     <!-- Content -->
 
