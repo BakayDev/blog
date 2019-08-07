@@ -86,6 +86,8 @@
         </div>
     </nav>
     <!-- End Header -->
+
+    @section('breadcrumbs', Breadcrumbs::render())
     @yield('breadcrumbs')
     @include('layouts.partials.flash')
     @yield('content')

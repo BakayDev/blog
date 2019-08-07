@@ -1,5 +1,8 @@
 @extends('layouts.app')
 
+@section('breadcrumbs')
+@endsection
+
 @section('content')
     <section class="page-title parallax bg-img-4">
 
