@@ -67,6 +67,7 @@
                         @else
                             <li class="dropdown"><a class="dropdown-toggle">  {{ Auth::user()->name }} <i class="ti-angle-down"></i></a>
                                 <ul class="dropdown-menu">
+                                    <li> <a class="dropdown-item" href="{{ route('admin.home') }}">{{ __('Admin') }}</a></li>
                                     <li> <a class="dropdown-item" href="{{ route('cabinet') }}">{{ __('Cabinet') }}</a></li>
                                     <li> <a class="dropdown-item" href="{{ route('logout') }}"
                                                onclick="event.preventDefault();
