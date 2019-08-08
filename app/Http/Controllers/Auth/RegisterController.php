@@ -33,7 +33,7 @@ class RegisterController extends Controller
         ]);
 
         Mail::to($user->email)->send(new VerifyMail($user));
-        event(new Registered($user));
+        //event(new Registered($user));
 
         return redirect()->route('login')
             ->with('success', 'Check your email and click on the link to verify.');
